@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Awqat Islamic Prayer App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --emerald-900: #064e3b;
+      --emerald-800: #065f46;
+      --emerald-700: #047857;
+      --emerald-600: #059669;
+      --emerald-500: #10b981;
+      --emerald-100: #d1fae5;
+      --emerald-50: #ecfdf5;
+      --gold-500: #c8a45a;
+      --gold-400: #d4b06a;
+      --gold-300: #e0c17f;
+      --sand-50: #faf8f5;
+      --sand-200: #e8dfd2;
+      --ink-700: #374151;
+      --ink-500: #6b7280;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--sand-50);
+      color: var(--ink-700);
+      line-height: 1.75;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--emerald-900) 0%, var(--emerald-800) 50%, var(--emerald-700) 100%);
+      position: relative;
+      overflow: hidden;
+      padding: 80px 24px 60px;
+      text-align: center;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(circle at 20% 50%, rgba(200, 164, 90, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 80% 30%, rgba(200, 164, 90, 0.06) 0%, transparent 40%);
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      opacity: 0.04;
+      background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 0L80 40L40 80L0 40Z' fill='none' stroke='%23ffffff' stroke-width='0.5'/%3E%3Cpath d='M40 10L70 40L40 70L10 40Z' fill='none' stroke='%23ffffff' stroke-width='0.5'/%3E%3Ccircle cx='40' cy='40' r='8' fill='none' stroke='%23ffffff' stroke-width='0.5'/%3E%3C/svg%3E");
+      background-size: 80px 80px;
+    }
+
+    .hero-content { position: relative; z-index: 1; max-width: 700px; margin: 0 auto; }
+
+    .hero .bismillah {
+      font-family: 'Amiri', serif;
+      font-size: 28px;
+      color: var(--gold-400);
+      margin-bottom: 24px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.2s;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.4s;
+    }
+
+    .hero .app-name {
+      font-size: clamp(18px, 3vw, 22px);
+      font-weight: 500;
+      color: var(--gold-300);
+      margin-bottom: 16px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.55s;
+    }
+
+    .hero .effective-date {
+      font-size: 14px;
+      color: rgba(255,255,255,0.55);
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.7s;
+    }
+
+    .hero .divider-line {
+      width: 60px;
+      height: 2px;
+      background: var(--gold-500);
+      margin: 20px auto 16px;
+      border-radius: 2px;
+      opacity: 0;
+      animation: fadeUp 0.8s ease forwards 0.6s;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .page-wrapper {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 0;
+      padding: 0 24px;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 32px;
+      align-self: start;
+      padding: 40px 24px 40px 0;
+      height: fit-content;
+      max-height: calc(100vh - 64px);
+      overflow-y: auto;
+    }
+
+    .sidebar-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--ink-500);
+      margin-bottom: 16px;
+    }
+
+    .sidebar nav a {
+      display: block;
+      padding: 8px 12px;
+      font-size: 13.5px;
+      font-weight: 500;
+      color: var(--ink-500);
+      text-decoration: none;
+      border-left: 2px solid transparent;
+      transition: all 0.2s ease;
+      margin-bottom: 2px;
+      border-radius: 0 6px 6px 0;
+    }
+
+    .sidebar nav a:hover {
+      color: var(--emerald-700);
+      background: var(--emerald-50);
+      border-left-color: var(--emerald-500);
+    }
+
+    .sidebar nav a.active {
+      color: var(--emerald-800);
+      background: var(--emerald-50);
+      border-left-color: var(--emerald-600);
+      font-weight: 600;
+    }
+
+    .content {
+      padding: 48px 0 80px 48px;
+      border-left: 1px solid var(--sand-200);
+      min-width: 0;
+    }
+
+    .section {
+      margin-bottom: 48px;
+      opacity: 0;
+      transform: translateY(12px);
+      animation: sectionIn 0.5s ease forwards;
+    }
+
+    .section:nth-child(1) { animation-delay: 0.1s; }
+    .section:nth-child(2) { animation-delay: 0.15s; }
+    .section:nth-child(3) { animation-delay: 0.2s; }
+    .section:nth-child(4) { animation-delay: 0.25s; }
+    .section:nth-child(5) { animation-delay: 0.3s; }
+
+    @keyframes sectionIn {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .section h2 {
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--emerald-900);
+      margin-bottom: 8px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--emerald-100);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section h2 .num {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      background: var(--emerald-800);
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 8px;
+      flex-shrink: 0;
+    }
+
+    .section p { margin-bottom: 14px; line-height: 1.8; }
+
+    .section ul {
+      list-style: none;
+      margin: 12px 0 18px;
+      padding: 0;
+    }
+
+    .section ul li {
+      position: relative;
+      padding: 8px 0 8px 28px;
+      line-height: 1.7;
+    }
+
+    .section ul li::before {
+      content: '';
+      position: absolute;
+      left: 4px;
+      top: 16px;
+      width: 8px;
+      height: 8px;
+      background: var(--emerald-500);
+      border-radius: 50%;
+      opacity: 0.7;
+    }
+
+    .callout {
+      background: linear-gradient(135deg, var(--emerald-50), #f0fdf8);
+      border-left: 3px solid var(--emerald-600);
+      border-radius: 0 10px 10px 0;
+      padding: 18px 22px;
+      margin: 20px 0;
+      font-size: 15px;
+      color: var(--emerald-800);
+      line-height: 1.7;
+    }
+
+    .contact-card {
+      background: #fff;
+      border: 1px solid var(--sand-200);
+      border-radius: 14px;
+      padding: 28px 32px;
+      margin-top: 16px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+
+    .contact-card p { margin-bottom: 6px; font-size: 15px; }
+
+    .contact-card a {
+      color: var(--emerald-700);
+      font-weight: 600;
+      text-decoration: none;
+      border-bottom: 1px dashed var(--emerald-500);
+      transition: border-color 0.2s;
+    }
+
+    .contact-card a:hover { border-bottom-style: solid; }
+
+    .footer {
+      text-align: center;
+      padding: 40px 24px;
+      border-top: 1px solid var(--sand-200);
+      color: var(--ink-500);
+      font-size: 14px;
+    }
+
+    .footer .dua {
+      font-family: 'Amiri', serif;
+      font-size: 18px;
+      color: var(--emerald-700);
+      font-style: italic;
+      margin-bottom: 12px;
+    }
+
+    @media (max-width: 860px) {
+      .page-wrapper { grid-template-columns: 1fr; padding: 0 16px; }
+      .sidebar {
+        position: static;
+        padding: 24px 0;
+        border-bottom: 1px solid var(--sand-200);
+        max-height: none;
+      }
+      .sidebar nav { display: flex; flex-wrap: wrap; gap: 4px; }
+      .sidebar nav a {
+        border-left: none;
+        border-radius: 20px;
+        padding: 6px 12px;
+        font-size: 12.5px;
+        border: 1px solid var(--sand-200);
+      }
+      .sidebar nav a:hover,
+      .sidebar nav a.active {
+        border-color: var(--emerald-500);
+        background: var(--emerald-50);
+        border-left: none;
+      }
+      .content { padding: 32px 0 60px; border-left: none; }
+      .hero { padding: 60px 20px 44px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-content">
+      <div class="bismillah">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+      <h1>Privacy Policy</h1>
+      <div class="app-name">Awqat Islamic Prayer App</div>
+      <div class="divider-line"></div>
+      <div class="effective-date">Effective Date: February 23, 2026</div>
+    </div>
+  </header>
+
+  <div class="page-wrapper">
+
+    <aside class="sidebar">
+      <div class="sidebar-label">Contents</div>
+      <nav id="sidebar-nav">
+        <a href="#introduction">Introduction</a>
+        <a href="#no-data-collection">No Data Collection</a>
+        <a href="#location-data">Location Data</a>
+        <a href="#notifications">Notifications</a>
+        <a href="#third-party">Third-Party Services</a>
+        <a href="#data-storage">Data Storage</a>
+        <a href="#children">Children's Privacy</a>
+        <a href="#changes">Changes to This Policy</a>
+        <a href="#contact">Contact Us</a>
+      </nav>
+    </aside>
+
+    <main class="content">
+
+      <div class="section" id="introduction">
+        <h2><span class="num">1</span> Introduction</h2>
+        <p>Welcome to Awqat (the "App"). Awqat is an Islamic prayer times application that helps you stay connected to your daily prayers. This Privacy Policy explains how the App handles your information.</p>
+        <p>We built Awqat with your privacy in mind. The App is designed to function with minimal data and does not require any account creation, registration, or login.</p>
+      </div>
+
+      <div class="section" id="no-data-collection">
+        <h2><span class="num">2</span> No Personal Data Collection</h2>
+        <div class="callout">Awqat does not collect, store, or transmit any personal data. There is no account registration, no login, no social sign-in, and no user profiles.</div>
+        <p>We do not collect:</p>
+        <ul>
+          <li>Names, email addresses, or any personal identifiers</li>
+          <li>Usage analytics or tracking data</li>
+          <li>Browsing or search history</li>
+          <li>Contacts, photos, or any other data from your device</li>
+        </ul>
+        <p>The App operates locally on your device and does not send personal information to any server.</p>
+      </div>
+
+      <div class="section" id="location-data">
+        <h2><span class="num">3</span> Location Data</h2>
+        <p>Awqat requests access to your device's GPS location solely to provide its core features:</p>
+        <ul>
+          <li><strong>Prayer time calculations</strong> — accurate prayer times based on your geographic coordinates</li>
+          <li><strong>Qibla direction</strong> — compass-based direction to the Kaaba in Makkah</li>
+        </ul>
+        <p>Your location data is processed entirely on your device and is not transmitted to, stored on, or shared with any external server or third party.</p>
+        <div class="callout">You can revoke location permissions at any time through your device settings. If location access is denied, you may manually set your location within the App to continue receiving prayer times.</div>
+      </div>
+
+      <div class="section" id="notifications">
+        <h2><span class="num">4</span> Notifications</h2>
+        <p>The App may send local notifications to remind you of prayer times and adhan alerts. These notifications are generated entirely on your device based on your calculated prayer schedule.</p>
+        <p>No data is sent to external push notification services. You can enable or disable notifications at any time through your device settings or the App's preferences.</p>
+      </div>
+
+      <div class="section" id="third-party">
+        <h2><span class="num">5</span> Third-Party Services</h2>
+        <p>Awqat does not integrate with third-party analytics, advertising, or tracking services. The App does not contain ads and does not share any data with advertisers.</p>
+        <p>If the App uses any third-party libraries or SDKs for functionality (such as mapping or compass features), these operate locally on your device and do not transmit personal data.</p>
+      </div>
+
+      <div class="section" id="data-storage">
+        <h2><span class="num">6</span> Data Storage</h2>
+        <p>All App data — including your prayer time preferences, notification settings, and calculation method — is stored locally on your device. No data is stored on external servers.</p>
+        <p>You can delete all App data at any time by clearing the App's storage or uninstalling the App from your device.</p>
+      </div>
+
+      <div class="section" id="children">
+        <h2><span class="num">7</span> Children's Privacy</h2>
+        <p>Since Awqat does not collect any personal data, the App is safe for users of all ages. We do not knowingly collect any information from children or any other users.</p>
+      </div>
+
+      <div class="section" id="changes">
+        <h2><span class="num">8</span> Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any changes will be reflected by updating the "Effective Date" at the top of this page. We encourage you to review this Privacy Policy periodically.</p>
+      </div>
+
+      <div class="section" id="contact">
+        <h2><span class="num">9</span> Contact Us</h2>
+        <p>If you have any questions or concerns regarding this Privacy Policy, please contact us:</p>
+        <div class="contact-card">
+          <p><strong>Awqat App Team</strong></p>
+          <p>Email: <a href="mailto:three.minutes.electro@gmail.com">three.minutes.electro@gmail.com</a></p>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <footer class="footer">
+    <div class="dua">May Allah bless your prayers and protect your privacy.</div>
+    <p>&copy; 2026 Awqat App. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const sections = document.querySelectorAll('.section[id]');
+    const navLinks = document.querySelectorAll('#sidebar-nav a');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navLinks.forEach(l => l.classList.remove('active'));
+          const link = document.querySelector(`#sidebar-nav a[href="#${entry.target.id}"]`);
+          if (link) link.classList.add('active');
+        }
+      });
+    }, { rootMargin: '-20% 0px -70% 0px' });
+    sections.forEach(s => observer.observe(s));
+  </script>
+
+</body>
+</html>
